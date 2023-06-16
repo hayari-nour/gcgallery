@@ -1,0 +1,43 @@
+.gallery-demo {
+  background: #178ccb;
+  padding: 20px 0;
+  color: #fff;
+}
+
+.gallery-demo-header {
+  font-size: 38px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 20px 0 10px;
+  font-weight: 600;
+}
+
+.gallery-demo-header-3 {
+  text-align: center;
+  font-weight: 300;
+  margin: 0;
+}
+
+.gallery-demo-subheader {
+  padding: 30px 0 20px;
+  text-align: center;
+}
+
+.gallery-container {
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .gallery-demo-header {
+    font-size: 22px;
+  }
+
+  .gallery-demo-header-3 {
+    font-size: 16px;
+  }
+
+  .gallery-demo {
+    padding: 0;
+  }
+}
