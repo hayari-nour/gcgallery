@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 
 import ImageGallery from 'src/ImageGallery';
 
-const PREFIX_URL = 'https://raw.githubusercontent.com/xiaolin/react-image-gallery/master/static/';
+const PREFIX_URL = 'https://raw.githubusercontent.com/hayari-nour/gcgallery/main/static/';
 
 
 class App extends React.Component {
@@ -11,7 +11,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      showIndex: false,
+      showIndex: true,
       showBullets: true,
       infinite: true,
       showThumbnails: true,
@@ -23,7 +23,7 @@ class App extends React.Component {
       isRTL: false,
       slideDuration: 450,
       slideInterval: 2000,
-      slideOnThumbnailOver: false,
+      slideOnThumbnailOver: true,
       thumbnailPosition: 'bottom',
       showVideo: {},
       useWindowKeyDown: true,
@@ -31,15 +31,15 @@ class App extends React.Component {
 
     this.images = [
       {
-        thumbnail: `${PREFIX_URL}4v.jpg`,
-        original: `${PREFIX_URL}4v.jpg`,
-        embedUrl: 'https://www.youtube.com/embed/4pSzhZ76GdM?autoplay=1&showinfo=0',
+        thumbnail: `${PREFIX_URL}gc28.jpg`,
+        original: `${PREFIX_URL}gc28.jpg`,
+        embedUrl: 'https://www.youtube.com/embed/0y6meK_HNA8?autoplay=1&showinfo=0',
         description: 'Render custom slides (such as videos)',
         renderItem: this._renderVideo.bind(this)
       },
       {
-        original: `${PREFIX_URL}1.jpg`,
-        thumbnail: `${PREFIX_URL}1t.jpg`,
+        original: `${PREFIX_URL}gc1.jpg`,
+        thumbnail: `${PREFIX_URL}gc1t.jpg`,
         originalClass: 'featured-slide',
         thumbnailClass: 'featured-thumb',
         description: 'Custom class for slides & thumbnails',
@@ -90,8 +90,8 @@ class App extends React.Component {
     let images = [];
     for (let i = 2; i < 12; i++) {
       images.push({
-        original: `${PREFIX_URL}${i}.jpg`,
-        thumbnail:`${PREFIX_URL}${i}t.jpg`
+        original: `${PREFIX_URL}gc${i}.jpg`,
+        thumbnail:`${PREFIX_URL}gc${i}t.jpg`
       });
     }
 
@@ -197,7 +197,7 @@ class App extends React.Component {
           useWindowKeyDown={this.state.useWindowKeyDown}
         />
 
-        <div className='app-sandbox'>
+        {/* <div className='app-sandbox'>
 
           <div className='app-sandbox-content'>
             <h2 className='app-header'>Settings</h2>
@@ -325,8 +325,11 @@ class App extends React.Component {
               </li>
             </ul>
           </div>
+         
 
-        </div>
+        </div> */}
+
+
       </section>
     );
   }
